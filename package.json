@@ -1,7 +1,7 @@
 {
   "name": "nais-starter",
   "displayName": "nais-starter",
-  "description": "Generate Kubernetes config for your NAIS application",
+  "description": "Generate Kubernetes config for this app",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.53.0"
@@ -12,7 +12,7 @@
   "activationEvents": [
     "onCommand:nais-starter.naisStart"
   ],
-  "main": "./extension.js",
+  "main": "./src/extension.js",
   "contributes": {
     "commands": [
       {
