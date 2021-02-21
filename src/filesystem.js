@@ -1,4 +1,5 @@
 const fs = require('fs')
+const path = require('path')
 
 const determineProjectType = () => {
     const files = fs.readdirSync('.')
@@ -9,6 +10,13 @@ const determineProjectType = () => {
     return 'UNKNOWN'
 }
 
+const saveFile = (filePath, fileContents) => {
+    const dir = filePath.substring(0, filePath.lastIndexOf(path.sep))
+    fs.mkdirSync(dir, { recursive: true })
+    fs.writeFileSync(filePath, fileContents)
+}
+
 module.exports = {
-    determineProjectType
+    determineProjectType,
+    saveFile
 }

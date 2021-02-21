@@ -2,7 +2,7 @@ const assert = require("assert")
 const vscode = require("vscode")
 const fs = require("fs")
 
-const fsOps = require("../../src/fsoperations")
+const fsOps = require("../../src/filesystem")
 
 suite("Operations that touch the file system", () => {
   vscode.window.showInformationMessage("Start all tests.")
