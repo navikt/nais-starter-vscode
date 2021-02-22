@@ -2,7 +2,7 @@
 
 ```NAIS is the application plattform for the Norwegian Welfare Administration (NAV). This plugin is probably not very useful to you if you don't work there.```
 
-This plugin lets [NAIS](https://nais.io) users bootstrap build and deploy for their app without having to do a whole lot of manual YAML gymnastics. 
+This plugin lets [NAIS](https://nais.io) users bootstrap build and deploy for their app without doing lots of manual YAML gymnastics. 
 
 ## Features
 
@@ -22,6 +22,13 @@ No external dependencies or other prerequisites needed.
 ## Extension Settings
 
 No config needed
+
+## Test it on your own computer
+
+```bash
+npx vsce package
+code --install-extension nais-starter-vscode-1.0.0.vsix
+``` 
 
 ## Questions? Comments? Issues?
 
