@@ -1,4 +1,4 @@
-# nais-starter
+# nais-starter-vscode
 
 ```NAIS is the application plattform for the Norwegian Welfare Administration (NAV). This plugin is probably not very useful to you if you don't work there.```
 

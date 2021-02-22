@@ -1,8 +1,8 @@
 {
-  "name": "nais-starter",
-  "displayName": "nais-starter",
-  "description": "Generate Kubernetes config and GitHub workflowfor your app",
-  "version": "0.0.1",
+  "name": "nais-starter-vscode",
+  "displayName": "NAIS starter",
+  "description": "Generate Kubernetes config and GitHub workflow for your app",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.53.0"
   },
