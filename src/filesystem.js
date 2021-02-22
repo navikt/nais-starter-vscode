@@ -1,8 +1,8 @@
-const fs = require('fs')
+const filesystem = require('fs')
 const path = require('path')
 
 const determineProjectType = () => {
-    const files = fs.readdirSync('.')
+    const files = filesystem.readdirSync('.')
     if (files.includes('pom.xml')) return 'JVM_MAVEN'
     if (files.includes('build.gradle')) return 'JVM_GRADLE'
     if (files.includes('build.gradle.kts')) return 'JVM_GRADLE'
@@ -12,11 +12,18 @@ const determineProjectType = () => {
 
 const saveFile = (filePath, fileContents) => {
     const dir = filePath.substring(0, filePath.lastIndexOf(path.sep))
-    fs.mkdirSync(dir, { recursive: true })
-    fs.writeFileSync(filePath, fileContents)
+    filesystem.mkdirSync(dir, { recursive: true })
+    filesystem.writeFileSync(filePath, fileContents)
+}
+
+const lastSegmentOf = (aPath) => {
+    const sepIdx = aPath.lastIndexOf(path.sep)
+    if (path.sep === -1) return aPath
+    return aPath.substring(sepIdx + 1)
 }
 
 module.exports = {
     determineProjectType,
-    saveFile
+    saveFile,
+    lastSegmentOf
 }

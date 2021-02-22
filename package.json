@@ -1,7 +1,7 @@
 {
   "name": "nais-starter",
   "displayName": "nais-starter",
-  "description": "Generate Kubernetes config for this app",
+  "description": "Generate Kubernetes config and GitHub workflowfor your app",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.53.0"
@@ -17,7 +17,7 @@
     "commands": [
       {
         "command": "nais-starter.naisStart",
-        "title": "Generate Kubernetes config for your NAIS application"
+        "title": "Generate build and deploy spells for NAIS"
       }
     ]
   },

@@ -3,6 +3,7 @@ const window = vscode.window
 
 const filesystem = require('./filesystem')
 const http = require('./http')
+const utils = require('./utils')
 
 const activate = (context) => {
 	const startCmd = vscode.commands.registerCommand('nais-starter.naisStart', async () => {
@@ -22,6 +23,11 @@ const activate = (context) => {
 const deactivate = () => {}
 
 const gatherInfo = async () => {
+	const projectType = filesystem.determineProjectType()
+	if (projectType === 'UNKNOWN'){
+		throw('Unable to recognize project type, I only know of Maven, Gradle and Node/NPM projects')
+	} 
+
 	const team = await window.showInputBox({
 		placeholder: "team name",
 		prompt: "What is the name of your team?"
@@ -36,21 +42,16 @@ const gatherInfo = async () => {
 	if(!extraFeaturesString) return
 
 	return {
-		appName: vscode.workspace.appName || 'myapp', 
+		appName: filesystem.lastSegmentOf(process.cwd()) || 'myapp', 
 		team, 
-		platform: filesystem.determineProjectType(), 
-		extras: mapToArray(extraFeaturesString)
+		platform: projectType, 
+		extras: utils.csvToArray(extraFeaturesString)
 	}
 }
 
 const writeToDisk = (responseData) => {
-	Object.keys(responseData).forEach((key) => filesystem.saveFile(key, decode(responseData[key])))
+	Object.keys(responseData).forEach((key) => filesystem.saveFile(key, utils.decodeB64(responseData[key])))
 }
-
-const mapToArray = (str) => 
-	str ? str.split(',').map((feature) => feature.trim())  : []
-
-const decode = (b64Txt) => Buffer.from(b64Txt, 'base64').toString()
 
 module.exports = {
 	activate,
