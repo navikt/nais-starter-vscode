@@ -1,65 +1,29 @@
-# nais-starter README
+# nais-starter
 
-This is the README for your extension "nais-starter". After writing up a brief description, we recommend including the following sections.
+```NAIS is the application plattform for the Norwegian Welfare Administration (NAV). This plugin is probably not very useful to you if you don't work there.```
+
+This plugin lets [NAIS](https://nais.io) users bootstrap build and deploy for their app without having to do a whole lot of manual YAML gymnastics. 
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+This plugin asks for the informations it needs, uses this info to retrieve basic YAML from [start.nais.io](https://start.nais.io) and saves it in the project directory.
 
-For example if there is an image subfolder under your extension project workspace:
+Currently supported project types are:
+- Maven
+- Gradle
+- NodeJS/NPM
 
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+Project type is determined automatically based on the presence of `pom.xml`, `package.json` et al. in the project directory
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+No external dependencies or other prerequisites needed.
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+No config needed
 
-For example:
+## Questions? Comments? Issues?
 
-This extension contributes the following settings:
+Raise an issue in this repo. Internal users kan contact us on Slack in the #nais channel.
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
