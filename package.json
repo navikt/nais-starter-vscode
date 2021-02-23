@@ -2,8 +2,9 @@
   "name": "nais-starter-vscode",
   "displayName": "NAIS starter",
   "description": "Generate Kubernetes config and GitHub workflow for your app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "navikt",
+  "icon": "images/naislogo.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/navikt/nais-starter-vscode.git"
