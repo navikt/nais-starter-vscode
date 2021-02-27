@@ -1,5 +1,7 @@
 # nais-starter-vscode
 
+![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/navikt.nais-starter-vscode)
+
 ```NAIS is the application platform for the Norwegian Welfare Administration (NAV). This plugin is probably not very useful to you if you don't work there.```
 
 This plugin lets [NAIS](https://nais.io) users bootstrap build and deploy for their app without doing lots of manual YAML gymnastics. 
