@@ -11,6 +11,8 @@ const determineProjectType = () => {
 }
 
 const saveFile = (filePath, fileContents) => {
+    if (filePath.includes('..')) throw(`Won't write '${filePath}', the path looks kinda suspicious`)
+
     const dir = filePath.substring(0, filePath.lastIndexOf(path.sep))
     filesystem.mkdirSync(dir, { recursive: true })
     filesystem.writeFileSync(filePath, fileContents)

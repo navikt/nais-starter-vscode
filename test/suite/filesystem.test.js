@@ -37,6 +37,11 @@ suite("Stuff that concerns the local file system", () => {
     const path = "dir_without_separator"
     assert.strictEqual('dir_without_separator', filesystem.lastSegmentOf(path))
   })
+
+  test("paths with '..' are treated as suspicious", () => {
+    const path = "/looks/../like/lfi"
+    assert.throws(() => filesystem.saveFile(path))
+  })
 })
 
 const createFile = (filePath) => {
