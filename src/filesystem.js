@@ -6,6 +6,7 @@ const determineProjectType = () => {
     if (files.includes('pom.xml')) return 'JVM_MAVEN'
     if (files.includes('build.gradle')) return 'JVM_GRADLE'
     if (files.includes('build.gradle.kts')) return 'JVM_GRADLE'
+    if (files.includes('go.mod')) return 'GO_MAKE'
     if (files.includes('package.json')) return 'NODEJS'
     return 'UNKNOWN'
 }

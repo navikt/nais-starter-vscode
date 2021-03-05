@@ -10,7 +10,8 @@ suite("Stuff that concerns the local file system", () => {
   const projectTypes = {
     "pom.xml": "JVM_MAVEN",
     "build.gradle": "JVM_GRADLE",
-    "build.gradle.kts": "JVM_GRADLE"
+    "build.gradle.kts": "JVM_GRADLE",
+    "go.mod": "GO_MAKE"
     // No package.json as it will delete the one for this project :)
   }
 
