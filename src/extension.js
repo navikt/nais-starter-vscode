@@ -40,11 +40,18 @@ const gatherInfo = async () => {
 		prompt: "Need any of these extras?"
 	})
 
+	const kafkaTopicString = await window.showInputBox({
+		value: "topic1,topic2",
+		placeholder: "topic1,topic2",
+		prompt: "Need any Kafka topics?"
+	})
+
 	return {
 		appName: filesystem.lastSegmentOf(process.cwd()) || 'myapp', 
 		team, 
 		platform: projectType, 
-		extras: utils.csvToArray(extraFeaturesString)
+		extras: utils.csvToArray(extraFeaturesString),
+		kafkaTopics: utils.csvToArray(kafkaTopicString)
 	}
 }
 
