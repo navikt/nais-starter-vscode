@@ -39,7 +39,6 @@ const gatherInfo = async () => {
 		placeholder: "idporten,aad,postgres",
 		prompt: "Need any of these extras?"
 	})
-	if(!extraFeaturesString) return
 
 	return {
 		appName: filesystem.lastSegmentOf(process.cwd()) || 'myapp', 
