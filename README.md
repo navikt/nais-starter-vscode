@@ -29,7 +29,7 @@ No config needed
 
 ```bash
 npx vsce package
-code --install-extension nais-starter-vscode-1.0.0.vsix
+code --install-extension nais-starter-vscode-X.X.X.vsix
 ``` 
 
 ## Questions? Comments? Issues?
