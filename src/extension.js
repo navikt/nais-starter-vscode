@@ -35,8 +35,8 @@ const gatherInfo = async () => {
 	if (!team) return
 
 	const extraFeaturesString = await window.showInputBox({
-		value: "idporten,aad,postgres,elastic",
-		placeholder: "idporten,aad,postgres,elastic",
+		value: "idporten,aad,postgres,elastic,bigquery",
+		placeholder: "idporten,aad,postgres,elastic,bigquery",
 		prompt: "Need any of these extras?"
 	})
 

@@ -2,7 +2,12 @@ const axios = require('axios').default
 
 const fetchAppConfig = async (appInfo) => {
     try {
-        const response = await axios.post('https://start.nais.io/app', appInfo)   
+        const response = await axios.post('https://start.nais.io/app', appInfo, {
+            headers: {
+                'Accept': 'application/json'
+            }
+          }
+        )
         return response.data
     } catch (error) {
         // relay error msg from server
